@@ -4,11 +4,10 @@
         <img src="../static/iconFechar.png" @click="mostrarMenu"/>
 
         <a href="">Sobre nós</a>
-        <hr/>
+        <hr>
         <a href="">Entrar em contato</a>
-        <hr/>
+        <hr>
         <a href="">Reportar problema</a>
-        <hr/>
     </div>
     <div id="menu" @click=" mostrarMenu">
         <div></div>
@@ -47,6 +46,7 @@ methods:{
     width: 30px;
     height: 5px;
     margin-bottom: 3px;
+    border-radius: 6px;
 }
 #menu-bar{
     z-index: 3;
@@ -62,10 +62,6 @@ methods:{
     left: 0;
     top: 0;
     display: none;
-}
-#menu-bar hr{
-    width: 240px;
-    margin-right: 100px;
 }
 #menu-bar a{
     text-decoration: none;

@@ -31,7 +31,7 @@
         required
       ></b-form-input>
       <b-form-checkbox class="check"
-        >Li e aceito os <span>termos de uso</span>.</b-form-checkbox
+        >Eu li e concordo com os <span>termos de uso</span>.</b-form-checkbox
       >
       <b-button class="enviar" type="submit" v-on:click="criaCadastro"
         >Enviar</b-button
@@ -101,6 +101,7 @@ export default {
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+  color: black;
 }
 h3 {
   font-weight: bolder;
