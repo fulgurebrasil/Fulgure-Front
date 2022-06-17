@@ -92,7 +92,7 @@ export default {
       })
     },
     criaCadastro() {
-      this.$router.push('/')
+      this.$router.push('/jogo-questao')
     },
   },
 }
