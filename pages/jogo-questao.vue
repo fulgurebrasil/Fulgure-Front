@@ -19,7 +19,7 @@
         <b-container class="conteudoDica">
           <p>A região norte tem como pratos característicos a mandioca, o açaí, o feijão, o peixe e a rapadura.
           </p>
-          <p>Você possui 9 dicas restantes.</p>
+          <p align="center">Você possui 9 dicas restantes.</p>
         </b-container>
       </b-container>
       <dicaQuestao class="dicaTxt"></dicaQuestao>
