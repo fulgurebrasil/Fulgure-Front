@@ -47,9 +47,20 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    meta: {
+      title: 'Fulgure Brasil',
+      author: 'Alinne Gomes, Giovana Guedes, Alessandra Maia, Laís Keiko',
+    },
     manifest: {
+      name: "FulgureBrasil",
+      short_name: "Fulgure",
+      description: "Quiz sobre a cultura brasileira.",
       lang: 'en',
     },
+    icon: {
+      fileName: 'static/logo.png',
+      sizes: [64, 120, 144, 152, 192, 384, 512],
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
