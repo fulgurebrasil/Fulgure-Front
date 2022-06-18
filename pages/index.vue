@@ -7,39 +7,19 @@
     </p>
     <b-form @submit="onSubmit" @reset="onReset">
       <p class="label">Nome</p>
-      <b-form-input
-        class="nome input"
-        type="text"
-        placeholder="Seu nome"
-        v-model="form.nome"
-        required
-      ></b-form-input>
+      <b-form-input class="nome input" type="text" placeholder="Seu nome" v-model="form.nome" required></b-form-input>
       <p class="label">Email</p>
-      <b-form-input
-        class="email input"
-        type="email"
-        placeholder="example@mail.com"
-        v-model="form.email"
-        required
-      ></b-form-input>
+      <b-form-input class="email input" type="email" placeholder="example@mail.com" v-model="form.email" required>
+      </b-form-input>
       <p class="label">Senha</p>
-      <b-form-input
-        class="senha input"
-        type="password"
-        placeholder="••••••••••••••••••"
-        v-model="form.senha"
-        required
-      ></b-form-input>
-      <b-form-checkbox class="check"
-        >Eu li e concordo com os <span>termos de uso</span>.</b-form-checkbox
-      >
-      <b-button class="enviar" type="submit" v-on:click="criaCadastro"
-        >Enviar</b-button
-      >
+      <b-form-input class="senha input" type="password" placeholder="••••••••••••••••••" v-model="form.senha" required>
+      </b-form-input>
+      <b-form-checkbox class="check">Eu li e concordo com os <span>termos de uso</span>.</b-form-checkbox>
+      <b-button class="enviar" type="submit" v-on:click="criaCadastro">Enviar</b-button>
       <b-button class="google" type="button">
         <img src="../static/google.png" />
-        Cadastrar com Google</b-button
-      >
+        Cadastrar com Google
+      </b-button>
     </b-form>
   </b-container>
 </template>
@@ -92,7 +72,7 @@ export default {
       })
     },
     criaCadastro() {
-      this.$router.push('/jogo-questao')
+      this.$router.push('/tela-jogar')
     },
   },
 }
@@ -103,15 +83,18 @@ body {
   font-size: 16px;
   color: black;
 }
+
 h3 {
   font-weight: bolder;
 }
+
 .input,
 .enviar,
 .google,
 h3 {
   margin-bottom: 24px;
 }
+
 .enviar,
 .google {
   height: 44px;
@@ -122,19 +105,34 @@ h3 {
   box-shadow: 3px 3px 3px #9b9b9b;
   cursor: pointer;
 }
+
 .enviar {
   background-color: black;
   color: white;
+  margin-top: 6px;
 }
+
+.enviar:hover {
+  background-color: black;
+  opacity: 87%;
+}
+
 .google {
   background-color: white;
   color: black;
 }
+
 .google img {
   width: 25px;
   height: 25px;
   margin-right: 10px;
 }
+
+.google:hover {
+  background-color: transparent;
+  color: blue;
+}
+
 .label {
   margin-bottom: 14px;
 }
@@ -142,9 +140,11 @@ h3 {
 .check {
   color: rgb(129, 129, 129);
 }
+
 .check span {
   color: blue;
 }
+
 .instrucao {
   margin-bottom: 56px;
 }

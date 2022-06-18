@@ -2,7 +2,6 @@
   <b-container>
     <div id="menu-bar">
         <img src="../static/iconFechar.png" @click="mostrarMenu"/>
-
         <a href="">Sobre nós</a>
         <hr>
         <a href="">Entrar em contato</a>
