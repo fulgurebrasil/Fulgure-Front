@@ -58,7 +58,7 @@ export default {
       lang: 'en',
     },
     icon: {
-      fileName: 'static/logo.png',
+      fileName: 'logo.png',
       sizes: [64, 120, 144, 152, 192, 384, 512],
     }
   },
