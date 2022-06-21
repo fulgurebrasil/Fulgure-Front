@@ -1,6 +1,7 @@
 <template>
     <nav>
         <ul>
+            <NuxtLink to="/tela-jogar"><li><a>Home</a></li></NuxtLink>
             <li><a>Sobre nós</a></li>
             <li><a>Entrar em contato</a></li>
             <li><a>Reportar problema</a></li>

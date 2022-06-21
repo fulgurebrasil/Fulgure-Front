@@ -41,7 +41,7 @@ export default {
 
 <style>
 body {
-  background-image: url('~/static/main2.png');
+  background-image: url("../static/main2.png") !important;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -99,15 +99,18 @@ body {
     display: none;
   }
 }
+
 @media only screen and (min-device-width: 1800px) {
   .jogar h1 {
     font-size: 120px;
   }
+
   .jogar {
     width: 100%;
     transform: translateX(35%);
   }
 }
+
 @media only screen and (min-device-width: 2000px) {
   .container {
     width: 100%;

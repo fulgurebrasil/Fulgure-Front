@@ -2,6 +2,8 @@
   <b-container>
     <div id="menu-bar">
         <img src="../static/iconFechar.png" @click="mostrarMenu"/>
+        <NuxtLink to="/tela-jogar">Home</NuxtLink>
+        <hr>
         <a href="">Sobre nós</a>
         <hr>
         <a href="">Entrar em contato</a>

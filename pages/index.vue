@@ -135,8 +135,7 @@ h3 {
 }
 
 .enviar:hover {
-  background-color: black;
-  opacity: 87%;
+  background-color: rgba(0, 0, 0, 87%);
 }
 
 .google {

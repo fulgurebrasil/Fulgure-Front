@@ -55,7 +55,7 @@ export default {
       name: "FulgureBrasil",
       short_name: "Fulgure",
       description: "Quiz sobre a cultura brasileira.",
-      lang: 'en',
+      lang: 'pt-br',
     },
     icon: {
       fileName: 'logo.png',

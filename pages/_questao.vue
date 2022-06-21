@@ -154,7 +154,7 @@ export default {
 
 <style>
 body {
-  background-image: url('~/static/main2.PNG') !important;
+  background-image: url("../static/main2.png") !important;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Montserrat', sans-serif;
