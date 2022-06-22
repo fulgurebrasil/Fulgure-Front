@@ -41,7 +41,7 @@ export default {
 
 <style>
 body {
-  background-image: url("../static/main2.png") !important;
+  background-image: url("../static/main2.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

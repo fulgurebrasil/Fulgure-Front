@@ -1,49 +1,31 @@
 <template>
-  <b-container>
-    <MenuHamburguer class="menu"> </MenuHamburguer>
-    <h3>Cadastrar</h3>
-    <p class="label instrucao">
-      Insira os seus dados para realizar o cadastro.
-    </p>
-    <b-form @submit="onSubmit" @reset="onReset">
-      <p class="label">Nome</p>
-      <b-form-input
-        class="nome input"
-        type="text"
-        placeholder="Seu nome"
-        v-model="form.nome"
-        required
-      ></b-form-input>
-      <p class="label">Email</p>
-      <b-form-input
-        class="email input"
-        type="email"
-        placeholder="example@mail.com"
-        v-model="form.email"
-        required
-      >
-      </b-form-input>
-      <p class="label">Senha</p>
-      <b-form-input
-        class="senha input"
-        type="password"
-        placeholder="••••••••••••••••••"
-        v-model="form.senha"
-        required
-      >
-      </b-form-input>
-      <b-form-checkbox class="check"
-        >Eu li e concordo com os <span>termos de uso</span>.</b-form-checkbox
-      >
-      <b-button class="enviar" type="submit" v-on:click="criaCadastro"
-        >Enviar</b-button
-      >
-      <b-button class="google" type="button">
-        <img src="~/static/google.png" />
-        Cadastrar com Google
-      </b-button>
-    </b-form>
-  </b-container>
+  <div>
+    <barraNav class="nav"></barraNav>
+    <b-container>
+      <MenuHamburguer class="menu"> </MenuHamburguer>
+      <h3>Cadastrar</h3>
+      <p class="label instrucao">
+        Insira os seus dados para realizar o cadastro.
+      </p>
+      <b-form @submit="onSubmit" @reset="onReset">
+        <p class="label">Nome</p>
+        <b-form-input class="nome input" type="text" placeholder="Seu nome" v-model="form.nome" required></b-form-input>
+        <p class="label">Email</p>
+        <b-form-input class="email input" type="email" placeholder="example@mail.com" v-model="form.email" required>
+        </b-form-input>
+        <p class="label">Senha</p>
+        <b-form-input class="senha input" type="password" placeholder="••••••••••••••••••" v-model="form.senha"
+          required>
+        </b-form-input>
+        <b-form-checkbox class="check">Eu li e concordo com os <span>termos de uso</span>.</b-form-checkbox>
+        <b-button class="enviar" type="submit" v-on:click="criaCadastro">Enviar</b-button>
+        <b-button class="google" type="button">
+          <img src="~/static/google.png" />
+          Cadastrar com Google
+        </b-button>
+      </b-form>
+    </b-container>
+  </div>
 </template>
 
 <script>
@@ -101,6 +83,7 @@ export default {
 </script>
 <style>
 body {
+  background-image: none !important;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: black;
@@ -108,6 +91,14 @@ body {
 
 h3 {
   font-weight: bolder;
+}
+
+.menu {
+  display: none;
+}
+
+.nav {
+  margin-bottom: 60px;
 }
 
 .input,
@@ -148,6 +139,7 @@ h3 {
   height: 25px;
   margin-right: 10px;
 }
+
 .google:hover {
   background-color: transparent;
   color: blue;
@@ -167,5 +159,15 @@ h3 {
 
 .instrucao {
   margin-bottom: 56px;
+}
+
+@media only screen and (max-device-width: 1000px) {
+  .menu {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
 }
 </style>

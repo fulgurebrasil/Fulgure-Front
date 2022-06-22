@@ -11,11 +11,30 @@
 
 <script>
 export default {
-
+head: {
+    title: 'Fulgure, Brasil!',
+    link: [
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap',
+      },
+    ],
+  },
 }
 </script>
 
 <style>
+body{
+    font-family: 'Monteserrat', sans-serif;
+}
 nav {
     background-color: white;
     width: 100%;
