@@ -1,6 +1,4 @@
 <template>
-  <div>
-    <barraNav class="nav"></barraNav>
     <b-container>
       <MenuHamburguer class="menu"> </MenuHamburguer>
       <h3>Cadastrar</h3>
@@ -25,7 +23,6 @@
         </b-button>
       </b-form>
     </b-container>
-  </div>
 </template>
 
 <script>
@@ -83,7 +80,7 @@ export default {
 </script>
 <style>
 body {
-  background-image: none !important;
+  background-image: none !important ;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: black;
@@ -91,14 +88,6 @@ body {
 
 h3 {
   font-weight: bolder;
-}
-
-.menu {
-  display: none;
-}
-
-.nav {
-  margin-bottom: 60px;
 }
 
 .input,
@@ -161,13 +150,4 @@ h3 {
   margin-bottom: 56px;
 }
 
-@media only screen and (max-device-width: 1000px) {
-  .menu {
-    display: block;
-  }
-
-  .nav {
-    display: none;
-  }
-}
 </style>
