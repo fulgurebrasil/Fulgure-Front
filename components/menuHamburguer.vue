@@ -1,38 +1,38 @@
 <template>
-  <b-container>
-    <div id="menu-bar">
-        <img src="../static/iconFechar.png" @click="mostrarMenu"/>
-        <a href="">Sobre nós</a>
-        <hr>
-        <a href="">Entrar em contato</a>
-        <hr>
-        <a href="">Reportar problema</a>
-    </div>
-    <div id="menu" @click=" mostrarMenu">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-  </b-container>
+    <b-container>
+        <div id="menu-bar">
+            <img src="../static/iconFechar.png" @click="mostrarMenu" />
+            <a href="">Sobre nós</a>
+            <hr>
+            <a href="">Entrar em contato</a>
+            <hr>
+            <a href="">Reportar problema</a>
+        </div>
+        <div id="menu" @click="mostrarMenu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </b-container>
 </template>
 
 <script>
 export default {
-methods:{
-    mostrarMenu(){
-        const menu = document.getElementById("menu-bar")
-        if(menu.style.display === 'block'){
-            menu.style.display = 'none'
-        }else{
-            menu.style.display = 'block'
+    methods: {
+        mostrarMenu() {
+            const menu = document.getElementById("menu-bar")
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
         }
     }
-}
 }
 </script>
 
 <style>
-#menu{
+#menu {
     width: 27px;
     height: 27px;
     cursor: pointer;
@@ -40,14 +40,16 @@ methods:{
     margin-top: 47px;
     margin-left: -10px;
 }
-#menu div{
+
+#menu div {
     background-color: black;
     width: 30px;
     height: 5px;
     margin-bottom: 3px;
     border-radius: 6px;
 }
-#menu-bar{
+
+#menu-bar {
     z-index: 3;
     position: fixed;
     float: left;
@@ -62,12 +64,14 @@ methods:{
     top: 0;
     display: none;
 }
-#menu-bar a{
+
+#menu-bar a {
     text-decoration: none;
     color: white;
     font-weight: 100;
 }
-#menu-bar img{
+
+#menu-bar img {
     cursor: pointer;
     width: 27px;
     height: 27px;

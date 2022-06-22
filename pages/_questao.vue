@@ -33,13 +33,8 @@
             {{ questoes[questao].comando }}
           </p>
           <b-form-radio-group id="grupo1">
-            <b-form-radio
-              class="alternativa"
-              :key="alternativa"
-              v-for="alternativa in questoes[questao].alternativas"
-            >
-              {{ alternativa }}</b-form-radio
-            >
+            <b-form-radio class="alternativa" :key="alternativa" v-for="alternativa in questoes[questao].alternativas">
+              {{ alternativa }}</b-form-radio>
             <span></span>
           </b-form-radio-group>
         </b-container>
@@ -403,6 +398,7 @@ body {
     width: 100%;
     transform: translateX(40%);
   }
+
   .questao {
     margin: 0;
   }
