@@ -25,7 +25,6 @@
             <p align="center">Você possui 9 dicas restantes.</p>
           </b-container>
         </b-container>
-        <dicaQuestao class="dicaTxt"></dicaQuestao>
 
         <h1 class="identificador">Questão {{ questao.id }}</h1>
         <b-container class="questao">
@@ -33,13 +32,18 @@
             {{ questao.comando }}
           </p>
           <b-form-radio-group id="grupo1">
-            <b-form-radio class="alternativa" :key="alternativa" v-for="alternativa in questao.alternativas">
-              {{ questao.alternativa }}</b-form-radio>
+            <b-form-radio
+              v-for="alternativa in questao.alternativas"
+              :key="alternativa"
+              class="alternativa"
+            >
+              {{ alternativa }}</b-form-radio
+            >
             <span></span>
           </b-form-radio-group>
         </b-container>
         <b-button-toolbar class="botoes">
-          <NuxtLink v-bind:to="`/${questao.id - 1}`">
+          <NuxtLink v-bind:to="`/questao/${questao.id - 1}`">
             <b-button class="voltar">
               <img src="~/static/voltar.png" />
             </b-button>
@@ -54,7 +58,7 @@
               <img src="~/static/coracaoPartido.PNG" />
             </b-button>
           </b-button-group>
-          <NuxtLink v-bind:to="`/${questao.id + 1}`">
+          <NuxtLink v-bind:to="`/questao/${questao.id + 1}`">
             <b-button class="avancar">
               <img src="~/static/avancar.png" />
             </b-button>
@@ -74,56 +78,18 @@ import menuHamburguer from '~/components/menuHamburguer.vue'
 import barraNav from '~/components/barraNav.vue'
 export default {
   components: { menuHamburguer, barraNav },
-  // async asyncData({ route }) {
-  //   const { questao } = await route.params
-  //   return { questao }
-  // },
-  async asyncData({ $axios, route }){
-    const idQuestao = route.params.questao;
-    const questao = await $axios.get("/questao/" + idQuestao);
-    return { questao };
+
+  async asyncData({ $axios, route }) {
+    const idQuestao = route.params.questao
+    const resposta = await $axios.get('/questao/' + idQuestao)
+    const questao = resposta.data
+    return { questao }
   },
 
   data() {
-    return {
-      // questoes: [
-      //   {
-      //     id: 0,
-      //     comando:
-      //       'Qual a maior influência cultural na culinária nortista brasileira?',
-      //     alternativas: [
-      //       'Europeia',
-      //       'Norte-Americana',
-      //       'Indígena',
-      //       'Asiática',
-      //       'Australiana',
-      //     ],
-      //     dica: 'A região norte tem como pratos característicos a mandioca, o açaí, o feijão, o peixe e a rapadura.',
-      //   },
-      //   {
-      //     id: 1,
-      //     comando:
-      //       'O cordel  é um genêro literário popular brasileiro, na maioria das vezes composto por rimas, que se originou através de falas e relatos. Em qual região o cordel se formou?',
-      //     alternativas: ['Norte', 'Nordeste', 'Centro-Oeste', 'Sul', 'Sudeste'],
-      //     dica: 'O cordelista Antônio Francisco, considerado o rei do cordel, nasceu em Mossoró, no Rio Grande do Norte.',
-      //   },
-      //   {
-      //     id: 2,
-      //     comando:
-      //       'Qual personagem folclórico é conhecido como o protetor das florestas brasileiras?',
-      //     alternativas: [
-      //       'Curupira',
-      //       'Iara',
-      //       'Cuca',
-      //       'Mula sem cabeça',
-      //       'Saci Pererê',
-      //     ],
-      //     dica: 'Possui cabelos cor de fogo e os pés virados para trás.',
-      //   },
-      // ],
-    }
+    return {}
   },
-    head: {
+  head: {
     title: 'Fulgure, Brasil!',
     link: [
       {
@@ -155,7 +121,7 @@ export default {
 
 <style>
 body {
-  background-image: url("../../static/main2.png") !important;
+  background-image: url('../../static/main2.png') !important;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Montserrat', sans-serif;
