@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink v-bind:to="`/${questaoId}`">
+  <NuxtLink v-bind:to="`/questao/1`">
     <b-button class="botao">
       <img src="../static/start.JPG" />
     </b-button>
