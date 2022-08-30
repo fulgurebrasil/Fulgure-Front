@@ -38,7 +38,7 @@
       <b-button class="enviar" type="submit" v-on:click="criaCadastro"
         >Enviar</b-button
       >
-      <b-button class="google" type="button">
+      <b-button class="google" type="button" v-on:click="deletaUsuario">
         <img src="~/static/google.png" />
         Cadastrar com Google
       </b-button>
@@ -94,6 +94,11 @@ export default {
         this.show = true
       })
     },
+    deletaUsuario({ $axios }){
+      this.$axios.delete("/usuario/1");
+      const resposta = document.getElementById("delete");
+      resposta.innerHTML = "sucesso";
+    },
     criaCadastro({ $axios }) {
       this.$axios
         .post('/usuario', {
@@ -102,15 +107,12 @@ export default {
           senha: this.form.senha,
         })
         .then((resposta) => {
-          console.log(resposta)
+          console.log(resposta.data)
         })
-      this.$router.push('/tela-jogar')
+      
     },
+    
 
-    deletaUsuario({ $axios }){
-      const resposta = document.getElementById("delete");
-      $axios.delete("/usuario/1").then(() => resposta.innerHTML = "deletado com sucesso");
-    }
   },
 }
 </script>
