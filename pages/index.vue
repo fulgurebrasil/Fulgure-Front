@@ -7,20 +7,43 @@
     </p>
     <b-form @submit="onSubmit" @reset="onReset">
       <p class="label">Nome</p>
-      <b-form-input class="nome input" type="text" placeholder="Seu nome" v-model="form.nome" required></b-form-input>
+      <b-form-input
+        class="nome input"
+        type="text"
+        placeholder="Seu nome"
+        v-model="form.nome"
+        required
+      ></b-form-input>
       <p class="label">Email</p>
-      <b-form-input class="email input" type="email" placeholder="example@mail.com" v-model="form.email" required>
+      <b-form-input
+        class="email input"
+        type="email"
+        placeholder="example@mail.com"
+        v-model="form.email"
+        required
+      >
       </b-form-input>
       <p class="label">Senha</p>
-      <b-form-input class="senha input" type="password" placeholder="••••••••••••••••••" v-model="form.senha" required>
+      <b-form-input
+        class="senha input"
+        type="password"
+        placeholder="••••••••••••••••••"
+        v-model="form.senha"
+        required
+      >
       </b-form-input>
-      <b-form-checkbox class="check">Eu li e concordo com os <span>termos de uso</span>.</b-form-checkbox>
-      <b-button class="enviar" type="submit" v-on:click="criaCadastro">Enviar</b-button>
+      <b-form-checkbox class="check"
+        >Eu li e concordo com os <span>termos de uso</span>.</b-form-checkbox
+      >
+      <b-button class="enviar" type="submit" v-on:click="criaCadastro"
+        >Enviar</b-button
+      >
       <b-button class="google" type="button">
         <img src="~/static/google.png" />
         Cadastrar com Google
       </b-button>
     </b-form>
+    <h1 id="delete"></h1>
   </b-container>
 </template>
 
@@ -71,9 +94,23 @@ export default {
         this.show = true
       })
     },
-    criaCadastro() {
+    criaCadastro({ $axios }) {
+      this.$axios
+        .post('/usuario', {
+          nome: this.form.nome,
+          email: this.form.email,
+          senha: this.form.senha,
+        })
+        .then((resposta) => {
+          console.log(resposta)
+        })
       this.$router.push('/tela-jogar')
     },
+
+    deletaUsuario({ $axios }){
+      const resposta = document.getElementById("delete");
+      $axios.delete("/usuario/1").then(() => resposta.innerHTML = "deletado com sucesso");
+    }
   },
 }
 </script>
