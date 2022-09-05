@@ -23,24 +23,6 @@
 <script>
 import itemListaUsuarios from '~/components/itemListaUsuarios.vue'
 export default {
-  // name: "IndexPage",
-  // head: {
-  //     title: 'Fulgure, Brasil!',
-  //     link: [
-  //         {
-  //             rel: 'preconnect',
-  //             href: 'https://fonts.googleapis.com',
-  //         },
-  //         {
-  //             rel: 'preconnect',
-  //             href: 'https://fonts.gstatic.com',
-  //         },
-  //         {
-  //             rel: 'stylesheet',
-  //             href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap',
-  //         },
-  //     ],
-  // },
   data() {
     return {
       usuarios: [],
@@ -65,31 +47,31 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Montserrat:wght@300&display=swap');
-body {
-  background-image: url('~/static/fundoPerfil.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  color: black;
-}
+  @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Montserrat:wght@300&display=swap');
+  body {
+      background-image: url("../static/fundoPerfil.png") ;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      color: black;
+  }
 
-h1 {
-  margin: auto;
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 70px;
-  font-family: 'League Spartan', sans-serif;
-  font-weight: bolder;
-}
+  h1{
+      margin: auto;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 50px;
+      font-family: 'League Spartan', sans-serif;
+      font-weight: bolder;
+  }
 
-button {
-  background-color: rgb(53, 53, 53);
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  margin: auto;
-  margin-top: 30px;
-}
+  button{
+      background-color: rgb(53, 53, 53);
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      margin: auto;
+      margin-top: 30px;
+  }
 </style>

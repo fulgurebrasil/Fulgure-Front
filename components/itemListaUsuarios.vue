@@ -19,27 +19,23 @@ export default {
 </script>
 
 <style>
-.item-perfis {
-  border-radius: 10px;
-  margin-bottom: 20px;
-  width: 85%;
-  margin: auto;
-  box-shadow: 3px 3px 3px 3px #9b9b9b;
-}
+.item-perfis{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 60%;
+    height: 80px;
+    margin: auto;
+    box-shadow: 3px 3px 3px 2px rgb(182, 182, 182);
+  }
+      
+  a{
+    color: black;
+  }
 
-a {
-  color: black;
-}
-
-.img {
-  width: 70px;
-  height: 70px;
-  margin-left: 50px;
-  border: solid #345fcd 0.5px;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 40px;
-}
+  .img{
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
+    border: solid #f0aa15 0.5px;
+  }
 </style>

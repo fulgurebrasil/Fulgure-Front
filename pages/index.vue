@@ -52,23 +52,7 @@ import menuHamburguer from '~/components/menuHamburguer.vue'
 export default {
   components: { menuHamburguer },
   name: 'IndexPage',
-  // head: {
-  //   title: 'Fulgure, Brasil!',
-  //   link: [
-  //     {
-  //       rel: 'preconnect',
-  //       href: 'https://fonts.googleapis.com',
-  //     },
-  //     {
-  //       rel: 'preconnect',
-  //       href: 'https://fonts.gstatic.com',
-  //     },
-  //     {
-  //       rel: 'stylesheet',
-  //       href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap',
-  //     },
-  //   ],
-  // },
+ 
   data() {
     return {
       form: {

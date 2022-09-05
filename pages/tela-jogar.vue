@@ -19,23 +19,6 @@ import barraNav from '~/components/barraNav.vue'
 import iniciarJogo from '~/components/iniciarJogo.vue'
 export default {
   components: { iniciarJogo, menuHamburguer, barraNav },
-  // head: {
-  //   title: 'Fulgure, Brasil!',
-  //   link: [
-  //     {
-  //       rel: 'preconnect',
-  //       href: 'https://fonts.googleapis.com',
-  //     },
-  //     {
-  //       rel: 'preconnect',
-  //       href: 'https://fonts.gstatic.com',
-  //     },
-  //     {
-  //       rel: 'stylesheet',
-  //       href: 'https://fonts.googleapis.com/css2?family=League+Spartan&display=swap',
-  //     },
-  //   ],
-  // },
 }
 </script>
 
@@ -110,16 +93,6 @@ body {
     width: 100%;
     transform: translateX(35%);
   }
-}
 
-@media only screen and (min-device-width: 2000px) {
-  .container {
-    width: 100%;
-    transform: translateX(30%);
-  }
-
-  .jogar h1 {
-    font-size: 160px;
-  }
 }
 </style>
