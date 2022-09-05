@@ -38,12 +38,12 @@
       <b-button class="enviar" type="submit" v-on:click="criaCadastro"
         >Enviar</b-button
       >
-      <b-button class="google" type="button" v-on:click="deletaUsuario">
+      <b-button class="google" type="button">
         <img src="~/static/google.png" />
         Cadastrar com Google
       </b-button>
+      <h1 id="resposta"></h1>
     </b-form>
-    <h1 id="delete"></h1>
   </b-container>
 </template>
 
@@ -52,23 +52,6 @@ import menuHamburguer from '~/components/menuHamburguer.vue'
 export default {
   components: { menuHamburguer },
   name: 'IndexPage',
-  // head: {
-  //   title: 'Fulgure, Brasil!',
-  //   link: [
-  //     {
-  //       rel: 'preconnect',
-  //       href: 'https://fonts.googleapis.com',
-  //     },
-  //     {
-  //       rel: 'preconnect',
-  //       href: 'https://fonts.gstatic.com',
-  //     },
-  //     {
-  //       rel: 'stylesheet',
-  //       href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap',
-  //     },
-  //   ],
-  // },
   data() {
     return {
       form: {
@@ -94,25 +77,19 @@ export default {
         this.show = true
       })
     },
-    deletaUsuario({ $axios }){
-      this.$axios.delete("/usuario/1");
-      const resposta = document.getElementById("delete");
-      resposta.innerHTML = "sucesso";
+    // deletaUsuario({ $axios }){
+    //   this.$axios.delete("/usuario/1");
+    //   const resposta = document.getElementById("delete");
+    //   resposta.innerHTML = "sucesso";
+    // },
+    criaCadastro() {
+      this.$axios.post('/usuario', {
+        nome: this.form.nome,
+        email: this.form.email,
+        senha: this.form.senha,
+      })
+      this.$router.push('/tela-usuario')
     },
-    criaCadastro({ $axios }) {
-      this.$axios
-        .post('/usuario', {
-          nome: this.form.nome,
-          email: this.form.email,
-          senha: this.form.senha,
-        })
-        .then((resposta) => {
-          console.log(resposta.data)
-        })
-      
-    },
-    
-
   },
 }
 </script>

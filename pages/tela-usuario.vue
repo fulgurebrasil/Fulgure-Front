@@ -4,57 +4,23 @@
       <h1>Usuários</h1>
 
       <div :key="usuario.id" v-for="usuario in usuarios">
-        <ItemListaUsuarios
-          :idUsuario="usuario.id"
-          :usuario="usuario.nome"
-        >
+        <ItemListaUsuarios :idUsuario="usuario.id" :usuario="usuario.nome">
         </ItemListaUsuarios>
       </div>
     </b-container>
     <div class="text-center">
-      <button clas="text-center" type="button" v-on:click="dadosConsulta">
-        Clique em mim
-      </button>
     </div>
-    <div id="dados"></div>
   </div>
 </template>
 
 <script>
 import itemListaUsuarios from '~/components/itemListaUsuarios.vue'
 export default {
-  // name: "IndexPage",
-  // head: {
-  //     title: 'Fulgure, Brasil!',
-  //     link: [
-  //         {
-  //             rel: 'preconnect',
-  //             href: 'https://fonts.googleapis.com',
-  //         },
-  //         {
-  //             rel: 'preconnect',
-  //             href: 'https://fonts.gstatic.com',
-  //         },
-  //         {
-  //             rel: 'stylesheet',
-  //             href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap',
-  //         },
-  //     ],
-  // },
   data() {
     return {
       usuarios: [],
       dados: '',
     }
-  },
-
-  methods: {
-    dadosConsulta() {
-      this.$axios.get('/usuario').then(function (response) {
-        const div = document.querySelector('#dados')
-        div.innerHTML = JSON.stringify(response.data)
-      })
-    },
   },
   async mounted() {
     const response = await this.$axios.get('/usuario')

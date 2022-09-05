@@ -1,10 +1,12 @@
 <template>
   <b-container>
     <div id="perfil">
-        <b-avatar class="img"></b-avatar>
-        <h1>{{ usuario.nome }}</h1>
-        <p>{{ usuario.email }}</p>
-        <p>{{ usuario.senha }}</p>
+      <b-avatar class="img"></b-avatar>
+      <h1>{{ usuario.nome }}</h1>
+      <p>{{ usuario.email }}</p>
+      <p>{{ usuario.senha }}</p>
+      <b-button v-on:click="deletaUsuario">Clique</b-button>
+      <h1 id="delete"></h1>
     </div>
     <div id="lixeira"></div>
   </b-container>
@@ -17,6 +19,12 @@ export default {
     const resposta = await $axios.get('/usuario/' + idUsuario)
     const usuario = resposta.data
     return { usuario }
+  },
+  methods: {
+    deletaUsuario() {
+      const id = this.$route.params.usuario
+      this.$axios.delete('/usuario/' + id)
+    },
   },
 }
 </script>
