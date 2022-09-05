@@ -38,12 +38,12 @@
       <b-button class="enviar" type="submit" v-on:click="criaCadastro"
         >Enviar</b-button
       >
-      <b-button class="google" type="button" v-on:click="deletaUsuario">
+      <b-button class="google" type="button">
         <img src="~/static/google.png" />
         Cadastrar com Google
       </b-button>
+      <h1 id="resposta"></h1>
     </b-form>
-    <h1 id="delete"></h1>
   </b-container>
 </template>
 
@@ -78,25 +78,14 @@ export default {
         this.show = true
       })
     },
-    deletaUsuario({ $axios }){
-      this.$axios.delete("/usuario/1");
-      const resposta = document.getElementById("delete");
-      resposta.innerHTML = "sucesso";
+    criaCadastro() {
+      this.$axios.post('/usuario', {
+        nome: this.form.nome,
+        email: this.form.email,
+        senha: this.form.senha,
+      })
+      this.$router.push('/tela-usuario')
     },
-    criaCadastro({ $axios }) {
-      this.$axios
-        .post('/usuario', {
-          nome: this.form.nome,
-          email: this.form.email,
-          senha: this.form.senha,
-        })
-        .then((resposta) => {
-          console.log(resposta.data)
-        })
-      
-    },
-    
-
   },
 }
 </script>
