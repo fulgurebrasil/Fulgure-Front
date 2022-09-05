@@ -19,27 +19,28 @@ import barraNav from '~/components/barraNav.vue'
 import iniciarJogo from '~/components/iniciarJogo.vue'
 export default {
   components: { iniciarJogo, menuHamburguer, barraNav },
-  head: {
-    title: 'Fulgure, Brasil!',
-    link: [
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.googleapis.com',
-      },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=League+Spartan&display=swap',
-      },
-    ],
-  },
+  // head: {
+  //   title: 'Fulgure, Brasil!',
+  //   link: [
+  //     {
+  //       rel: 'preconnect',
+  //       href: 'https://fonts.googleapis.com',
+  //     },
+  //     {
+  //       rel: 'preconnect',
+  //       href: 'https://fonts.gstatic.com',
+  //     },
+  //     {
+  //       rel: 'stylesheet',
+  //       href: 'https://fonts.googleapis.com/css2?family=League+Spartan&display=swap',
+  //     },
+  //   ],
+  // },
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Montserrat:wght@300&display=swap');
 body {
   background-image: url("../static/main2.png");
   background-repeat: no-repeat;

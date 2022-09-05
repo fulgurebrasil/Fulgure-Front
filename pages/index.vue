@@ -52,23 +52,23 @@ import menuHamburguer from '~/components/menuHamburguer.vue'
 export default {
   components: { menuHamburguer },
   name: 'IndexPage',
-  head: {
-    title: 'Fulgure, Brasil!',
-    link: [
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.googleapis.com',
-      },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap',
-      },
-    ],
-  },
+  // head: {
+  //   title: 'Fulgure, Brasil!',
+  //   link: [
+  //     {
+  //       rel: 'preconnect',
+  //       href: 'https://fonts.googleapis.com',
+  //     },
+  //     {
+  //       rel: 'preconnect',
+  //       href: 'https://fonts.gstatic.com',
+  //     },
+  //     {
+  //       rel: 'stylesheet',
+  //       href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap',
+  //     },
+  //   ],
+  // },
   data() {
     return {
       form: {
@@ -117,6 +117,7 @@ export default {
 }
 </script>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Montserrat:wght@300&display=swap');
 body {
   background-image: none !important;
   font-family: 'Montserrat', sans-serif;
