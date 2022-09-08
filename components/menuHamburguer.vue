@@ -7,6 +7,7 @@
             <a href="">Entrar em contato</a>
             <hr>
             <a href="">Reportar problema</a>
+            <NuxtLink v-bind:to="`/tela-jogar`">Jogar</NuxtLink>
         </div>
         <div id="menu" @click="mostrarMenu">
             <div></div>
